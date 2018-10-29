@@ -1,0 +1,60 @@
+\documentclass[a5paper,11pt]{article}
+
+\usepackage[russian]{babel}
+
+\usepackage[
+	top = 1cm,
+	bottom = 1cm,
+	left = 1cm,
+	right = 1cm
+]{geometry}
+\usepackage{amsthm} % для теорем
+%\usepackage{showframe}
+\newtheorem{thm}{Теорема}[section]
+\newtheorem{definition}{Определение}
+
+\newcounter{thetask}  % задаём имя счёчика 
+%\setcounter{Thezad}{1}  % устанавливаем его первое значение
+%\renewcommand{\Thezad}{\thechapter.%
+%\arabic{section}}
+\newenvironment{task}{\thetask}{s}
+
+\renewcommand{\labelitemi}{$\maltese$}
+
+\usepackage{amssymb} % для >=
+\usepackage{amsmath} % для стрелочки
+\title{Домашняя работа №1}
+\author{Совин Кирилл}
+\date{}
+
+\begin{document}
+    \section{Центральная предельная теорема}
+%    \newtheorem{thm}{Теорема}[Линдеберга]
+    \begin{thm}[Линдеберга]
+    	Пусть $\{ \xi_k \}_{k \geqslant 1}$ независимые случайные величины, $ \mathsf{E}\xi_k^2 <   +\infty \hspace{5pt} \forall k$, обозначим $m_k= \mathsf{E}\xi_k$, $\sigma_k^2=\mathsf{D}\xi_k>0$; $S_n=\sum\limits_{i=1}^{n} \xi_i$; $\mathsf{D}_n^2=\sum\limits_{k=1}^{n} \sigma_k^2$ и $F_k$~--- функция распределения $\xi_k$. Пусть выполнено условие Линдеберга, то есть:
+    	$$ \forall \varepsilon > 0 \hspace{5pt} \frac{1}{\mathsf{D}_n^2} \sum\limits_{k=1}^{n} \int\limits_{\{x: |x-m_k| > \varepsilon D \} } (x-m_k)^2 \, dF_k(x) \xrightarrow[n \rightarrow \infty]{} 0.$$
+    	Тогда $$\frac{ S_n - \mathsf{E}S_n } { \sqrt{\mathsf{D}S_n} \xrightarrow{d} \mathcal{N}(0,1) }, \hspace{5pt} n \rightarrow \infty .$$
+    \end{thm}
+    \subsection*{Гауссовские случайные вектора}
+	\begin{definition}
+	Случайный вектор $\vec{\xi} ~ \mathcal{N}(m,\varepsilon)$~--- гауссовский, если его характеристическая функция $ \phi_\xi(\vec{t} = \exp(i(\vec{m},\vec{t}) - \frac{1}{2}(\Sigma\vec{t},\vec{t})), \, \vec{m} \in \mathbb{R}^n, \Sigma$~--- симметричная неотрицательная определенная матрица.
+	\end{definition}
+	\begin{definition}
+		
+	\end{definition}
+	\begin{definition}
+		
+	\end{definition}
+	\begin{thm}
+		
+	\end{thm}
+	\section{Задачи по астрономии}
+%	\begin{task}
+		Задачка
+%	\end{task}
+	\section{Отзыв}
+	\begin{itemize}
+		\item Дз по мне слишком большое. Может, конечно, это я такой тормоз, но вот эта часть сверху заняла у меня без преувеличения 3 часа. И это даже не треть задания. 
+		\item Со счетчиками и окружениями на практике всё оказалось не столь понятно, а поверхностное гугление ничего не дало. 
+	\end{itemize}
+\end{document}
